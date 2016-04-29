@@ -1,4 +1,16 @@
 /*
+# Magic Switchboard
+A magic schwitchboard is a little box with four switches and four lamps colored in red, green, blue and yellow.
+The switches have got hats in the same colors. You can change the position of the lamps and the hats in any way you want.
+But the red switch always lights the red lamp, the blue the blue, the yellow the yellow and the green the green one.
+
+How does this work?
+The magician is the one operating the switchbox. He has to remember which switch was turned off last. 
+He then hands off the box to the audience and asks them to rearrange the colors.
+When the audience returns his box he remembers the sequence in which the lights turn on and turns the switches with matching color.
+
+For the audience it seems like the colors are connected somehow.
+
 This version is designed for the Attiny 2313 using the following pin Layout.
 
       Attiny 2313
@@ -16,22 +28,56 @@ GND        |______|
 
  */
 
+// this is the mask to get our input
 #define SCHWITCH_MASK 0b1111
+
+// this is the mask for our output
 #define LAMP_MASK 0b11110000
-#define RESET_DELAY 3000
+
+// how long do we wait when turned off, to reset and powerdown
+#define RESET_DELAY 2500
+
+// how many lamps/switches are connected
 #define LAMP_COUNT 4
+
+// shift a mask up the output mask
 #define LAMP_SHIFT 4
+
+// this switch is not connected, yet
 #define DISCONNECTED (0xFF)
 
+// power modes
+// in idle the main loop is paused, but the timer and the pcint are running
+#define idle( )   MCUCR = MCUCR & 0b10001111; MCUCR |= 1 << SE | 0 << SM1 | 0 << SM0;
 
+// in powerdown the timers and main loop are stopped, can only be woken up by PCINT (turning a switch)
+#define powerdown( ) MCUCR = MCUCR & 0b10001111; MCUCR |= 1 << SE | 1 << SM1 | 1 << SM0;
+
+// which switch is connected to which lamp
+// connections[switch] = lamp
 byte connections[LAMP_COUNT] = {DISCONNECTED, DISCONNECTED, DISCONNECTED, DISCONNECTED };
-byte change_history[LAMP_COUNT] = { 0, 1, 2, 3 };
 
+// which was the last swich changed?
+byte last_changed = 0;
+
+// current sequence used for assigning new lamps to unconnected switches
+byte sequence = 0;
+
+// how many lamps have already be connected
 byte current_lamp = 0;
-byte lamp_ordering[LAMP_COUNT] = { 0, 1, 2, 3 };
 
+// sequences for new lamp connections
+byte lamp_ordering[LAMP_COUNT][LAMP_COUNT] = {
+  { 0, 1, 2, 3 },
+  { 1, 0, 2, 3 },
+  { 2, 3, 1, 0 },
+  { 3, 2, 1, 0 }
+};
 
+// this mask stores the previous state of input
 byte last_switches = 0b0000;
+
+// this mask stores the current state of input
 byte current_switches = 0b0000;
  
 void setup() {
@@ -43,8 +89,7 @@ void setup() {
   GIMSK |= 1 << PCIE;
 
   // set sleep modes
-  //MCUCR |= 1 << SE | 1 << SM1 | 1 << SM0;
-  sei();
+  idle();
 
   // update switches
   PORTB = LAMP_MASK & (PINB << 4);
@@ -55,6 +100,9 @@ void setup() {
   // set timer compare register
   OCR1A = RESET_DELAY;
   TIMSK |= 1 << OCIE1A;
+
+  // activate interupts
+  sei();
 }
 
 void loop() {
@@ -63,46 +111,39 @@ void loop() {
 }
 
 ISR(TIMER1_COMPA_vect) {
-  if(current_switches == 0b0000) {
+  // if all switches are turned off
+  if(!current_switches) {
+    // disconnect all switches
     for(byte i = 0; i < LAMP_COUNT; i++) {
       connections[i] = DISCONNECTED;
     }
 
-    // the lights go on the same sequence the went off
-    memcpy(lamp_ordering, change_history, LAMP_COUNT);
+    // the lights go on in one of 4 sequences
+    // the sequence is selected by the last switch turned off
     current_lamp = 0;
+    sequence = last_changed;
 
-    for(byte i = 0; i < LAMP_COUNT; i++) {
-      PORTB = ((1 << get_next_lamp()) << LAMP_SHIFT) & LAMP_MASK;
-      delay(1000);
-      PORTB = 0;
-    }
-    current_lamp = 0;
     // deactivate timer
     TIMSK &= ~(1 << OCIE1A);
+    // got to sleep
+    powerdown();
   }
   TCNT1 = 0;
 }
 
-// returns a lamp without a connection. Returns DISCONNECTED if there is no such lamp.
+// returns a lamp without a connection. Calling this function more than LAMP_COUNT times causes an error!
 byte get_next_lamp() {
   if(current_lamp < LAMP_COUNT)
-    return 3 - lamp_ordering[3 - current_lamp++];
+    return lamp_ordering[sequence][current_lamp++];
   else fail();
-}
-
-void push_history(byte switched) {
-  byte i = LAMP_COUNT;
-  for(; i > 0 && change_history[i] != switched; i--);
-  for(; i > 0; i--) {
-    change_history[i] = change_history[i - 1];
-  }
-  change_history[0] = switched;
 }
 
 // a switch has been switched
 ISR(PCINT_vect)
 {
+  // idle while active, so timers are running
+  idle();
+  
   current_switches = PINB & SCHWITCH_MASK;
   byte changed = current_switches ^ last_switches;
 
@@ -110,7 +151,7 @@ ISR(PCINT_vect)
     // switch i changed
     if((changed >> i) & 1) {
       // remember which switch was last changed
-      push_history(i);
+      last_changed = i;
       // does it already have an connection?
       if(connections[i] == DISCONNECTED) {
         // if not connect to the next free Lamp
@@ -130,9 +171,12 @@ ISR(PCINT_vect)
   PORTB = LAMP_MASK & (lamps << LAMP_SHIFT);
   last_switches = current_switches;
 
-  // reset and activate timer
-  TCNT1 = 0;
-  TIMSK |= 1 << OCIE1A;
+  // if all switches turned off
+  if(!current_switches) {
+    // reset and activate timer
+    TCNT1 = 0;
+    TIMSK |= 1 << OCIE1A;
+  }
 }
 
 void fail() {

@@ -33,8 +33,10 @@ After a longer sleep time (ca. 30sec) it resets to default = 0 lever.
 In order to connect the correct colors from levers to lamps, you need to remember which lamp turns on next and flip the lever with the corresponding color.
 
 # Parts List
-- ON/OFF switch (MTS-102)
+- ON/OFF switch (MTS-203)
 - color caps
 - light bulb socket E10
 - LED light bulbs E10 in red, green, blue, yellow
 - Arduino Nano (or a cheap chinese clone)
+- Battery Clip for CR2477: https://www.digikey.de/product-detail/de/keystone-electronics/3039/36-3039-ND/3884009
+- On/Off Switch: https://www.digikey.de/product-detail/de/cw-industries/GF-123-3011/CWI334-ND/4089772

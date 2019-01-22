@@ -48,94 +48,6 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3500 2200 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:BC547 Q1
-U 1 1 5C2A55B4
-P 2400 5500
-F 0 "Q1" H 2591 5546 50  0000 L CNN
-F 1 "BC547" H 2591 5455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2600 5425 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 2400 5500 50  0001 L CNN
-	1    2400 5500
-	0    -1   1    0   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q2
-U 1 1 5C2A5640
-P 3000 5900
-F 0 "Q2" H 3191 5946 50  0000 L CNN
-F 1 "BC547" H 3191 5855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3200 5825 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3000 5900 50  0001 L CNN
-	1    3000 5900
-	0    -1   1    0   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q3
-U 1 1 5C2A56A0
-P 3650 6250
-F 0 "Q3" H 3841 6296 50  0000 L CNN
-F 1 "BC547" H 3841 6205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3850 6175 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3650 6250 50  0001 L CNN
-	1    3650 6250
-	0    -1   1    0   
-$EndComp
-$Comp
-L Transistor_BJT:BC547 Q4
-U 1 1 5C2A56EC
-P 4250 6600
-F 0 "Q4" H 4441 6646 50  0000 L CNN
-F 1 "BC547" H 4441 6555 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4450 6525 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 4250 6600 50  0001 L CNN
-	1    4250 6600
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5C2A5760
-P 2400 5100
-F 0 "R5" V 2193 5100 50  0000 C CNN
-F 1 "10k" V 2284 5100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 2330 5100 50  0001 C CNN
-F 3 "~" H 2400 5100 50  0001 C CNN
-	1    2400 5100
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5C2A581B
-P 3000 5500
-F 0 "R6" V 2793 5500 50  0000 C CNN
-F 1 "10k" V 2884 5500 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 2930 5500 50  0001 C CNN
-F 3 "~" H 3000 5500 50  0001 C CNN
-	1    3000 5500
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5C2A586B
-P 4250 6200
-F 0 "R8" V 4043 6200 50  0000 C CNN
-F 1 "10k" V 4134 6200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 4180 6200 50  0001 C CNN
-F 3 "~" H 4250 6200 50  0001 C CNN
-	1    4250 6200
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5C2A58B9
-P 3650 5850
-F 0 "R7" V 3443 5850 50  0000 C CNN
-F 1 "10k" V 3534 5850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P15.24mm_Horizontal" V 3580 5850 50  0001 C CNN
-F 3 "~" H 3650 5850 50  0001 C CNN
-	1    3650 5850
-	1    0    0    1   
-$EndComp
-$Comp
 L power:VCC #PWR011
 U 1 1 5C2A6172
 P 2800 1100
@@ -168,123 +80,25 @@ Wire Wire Line
 $Comp
 L power:GND #PWR013
 U 1 1 5C2A7170
-P 2650 5600
-F 0 "#PWR013" H 2650 5350 50  0001 C CNN
-F 1 "GND" H 2655 5427 50  0000 C CNN
-F 2 "" H 2650 5600 50  0001 C CNN
-F 3 "" H 2650 5600 50  0001 C CNN
-	1    2650 5600
-	0    -1   1    0   
+P 3850 7150
+F 0 "#PWR013" H 3850 6900 50  0001 C CNN
+F 1 "GND" H 3855 6977 50  0000 C CNN
+F 2 "" H 3850 7150 50  0001 C CNN
+F 3 "" H 3850 7150 50  0001 C CNN
+	1    3850 7150
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR09
 U 1 1 5C2A71D2
-P 1800 5600
-F 0 "#PWR09" H 1800 5450 50  0001 C CNN
-F 1 "VCC" H 1817 5773 50  0000 C CNN
-F 2 "" H 1800 5600 50  0001 C CNN
-F 3 "" H 1800 5600 50  0001 C CNN
-	1    1800 5600
-	0    -1   1    0   
+P 3850 6300
+F 0 "#PWR09" H 3850 6150 50  0001 C CNN
+F 1 "VCC" H 3867 6473 50  0000 C CNN
+F 2 "" H 3850 6300 50  0001 C CNN
+F 3 "" H 3850 6300 50  0001 C CNN
+	1    3850 6300
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 5600 1800 5600
-Wire Wire Line
-	2600 5600 2650 5600
-Wire Wire Line
-	2200 5600 2150 5600
-Wire Wire Line
-	2400 5250 2400 5300
-$Comp
-L power:VCC #PWR010
-U 1 1 5C2A9469
-P 2400 6000
-F 0 "#PWR010" H 2400 5850 50  0001 C CNN
-F 1 "VCC" H 2417 6173 50  0000 C CNN
-F 2 "" H 2400 6000 50  0001 C CNN
-F 3 "" H 2400 6000 50  0001 C CNN
-	1    2400 6000
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5C2A949A
-P 3250 6000
-F 0 "#PWR015" H 3250 5750 50  0001 C CNN
-F 1 "GND" H 3255 5827 50  0000 C CNN
-F 2 "" H 3250 6000 50  0001 C CNN
-F 3 "" H 3250 6000 50  0001 C CNN
-	1    3250 6000
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:VCC #PWR014
-U 1 1 5C2AA0CF
-P 3050 6350
-F 0 "#PWR014" H 3050 6200 50  0001 C CNN
-F 1 "VCC" H 3067 6523 50  0000 C CNN
-F 2 "" H 3050 6350 50  0001 C CNN
-F 3 "" H 3050 6350 50  0001 C CNN
-	1    3050 6350
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR019
-U 1 1 5C2AA100
-P 3900 6350
-F 0 "#PWR019" H 3900 6100 50  0001 C CNN
-F 1 "GND" H 3905 6177 50  0000 C CNN
-F 2 "" H 3900 6350 50  0001 C CNN
-F 3 "" H 3900 6350 50  0001 C CNN
-	1    3900 6350
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:VCC #PWR018
-U 1 1 5C2AB193
-P 3650 6700
-F 0 "#PWR018" H 3650 6550 50  0001 C CNN
-F 1 "VCC" H 3667 6873 50  0000 C CNN
-F 2 "" H 3650 6700 50  0001 C CNN
-F 3 "" H 3650 6700 50  0001 C CNN
-	1    3650 6700
-	0    -1   1    0   
-$EndComp
-$Comp
-L power:GND #PWR020
-U 1 1 5C2AB1C4
-P 4500 6700
-F 0 "#PWR020" H 4500 6450 50  0001 C CNN
-F 1 "GND" H 4505 6527 50  0000 C CNN
-F 2 "" H 4500 6700 50  0001 C CNN
-F 3 "" H 4500 6700 50  0001 C CNN
-	1    4500 6700
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	3650 6700 3700 6700
-Wire Wire Line
-	4000 6700 4050 6700
-Wire Wire Line
-	4450 6700 4500 6700
-Wire Wire Line
-	4250 6350 4250 6400
-Wire Wire Line
-	3050 6350 3100 6350
-Wire Wire Line
-	3400 6350 3450 6350
-Wire Wire Line
-	3850 6350 3900 6350
-Wire Wire Line
-	3650 6050 3650 6000
-Wire Wire Line
-	2750 6000 2800 6000
-Wire Wire Line
-	3200 6000 3250 6000
-Wire Wire Line
-	3000 5700 3000 5650
-Wire Wire Line
-	2400 6000 2450 6000
 $Comp
 L dk_Toggle-Switches:ATE1D-2M3-10-Z S3
 U 1 1 5C2B1CDD
@@ -546,29 +360,15 @@ Wire Wire Line
 Wire Wire Line
 	2250 3100 3000 3100
 Wire Wire Line
-	2400 4950 2400 3200
-Wire Wire Line
 	2400 3200 3000 3200
 Wire Wire Line
 	2500 3300 2500 5250
 Wire Wire Line
-	2500 5250 3000 5250
-Wire Wire Line
-	3000 5250 3000 5350
-Wire Wire Line
 	2500 3300 3000 3300
-Wire Wire Line
-	3650 5700 3650 5150
 Wire Wire Line
 	2600 5150 2600 3400
 Wire Wire Line
 	2600 3400 3000 3400
-Wire Wire Line
-	2600 5150 3650 5150
-Wire Wire Line
-	4250 6050 4250 5050
-Wire Wire Line
-	4250 5050 2700 5050
 Wire Wire Line
 	2700 5050 2700 3500
 Wire Wire Line
@@ -600,48 +400,15 @@ $EndComp
 Wire Wire Line
 	3600 4500 3600 4200
 $Comp
-L Device:LED D4
-U 1 1 5C2A5381
-P 3850 6700
-F 0 "D4" V 3888 6583 50  0000 R CNN
-F 1 "Yellow" V 3797 6583 50  0000 R CNN
-F 2 "switchboard:E10 Edison Socket Print Pins" H 3850 6700 50  0001 C CNN
-F 3 "~" H 3850 6700 50  0001 C CNN
-	1    3850 6700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:LED D3
-U 1 1 5C2A52B4
-P 3250 6350
-F 0 "D3" V 3288 6233 50  0000 R CNN
-F 1 "Blue" V 3197 6233 50  0000 R CNN
-F 2 "switchboard:E10 Edison Socket Print Pins" H 3250 6350 50  0001 C CNN
-F 3 "~" H 3250 6350 50  0001 C CNN
-	1    3250 6350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:LED D2
-U 1 1 5C2A527E
-P 2600 6000
-F 0 "D2" V 2638 5883 50  0000 R CNN
-F 1 "Green" V 2547 5883 50  0000 R CNN
-F 2 "switchboard:E10 Edison Socket Print Pins" H 2600 6000 50  0001 C CNN
-F 3 "~" H 2600 6000 50  0001 C CNN
-	1    2600 6000
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:LED D1
 U 1 1 5C2A516D
-P 2000 5600
-F 0 "D1" V 2038 5483 50  0000 R CNN
-F 1 "Red" V 1947 5483 50  0000 R CNN
-F 2 "switchboard:E10 Edison Socket Print Pins" H 2000 5600 50  0001 C CNN
-F 3 "~" H 2000 5600 50  0001 C CNN
-	1    2000 5600
-	-1   0    0    -1  
+P 3850 6500
+F 0 "D1" V 3888 6383 50  0000 R CNN
+F 1 "Red" V 3797 6383 50  0000 R CNN
+F 2 "switchboard:E10 Edison Socket Print Pins" H 3850 6500 50  0001 C CNN
+F 3 "~" H 3850 6500 50  0001 C CNN
+	1    3850 6500
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:CP C1
@@ -661,7 +428,7 @@ U 1 1 5C2D06C8
 P 1300 1100
 F 0 "SW1" H 1300 1335 50  0000 C CNN
 F 1 "SW_SPST" H 1300 1244 50  0000 C CNN
-F 2 "Resistor_THT:R_Radial_Power_L11.0mm_W7.0mm_P5.00mm" H 1300 1100 50  0001 C CNN
+F 2 "digikey-footprints:Switch_Toggle_ATE1D-2M3-10-Z" H 1300 1100 50  0001 C CNN
 F 3 "" H 1300 1100 50  0001 C CNN
 	1    1300 1100
 	1    0    0    -1  
@@ -691,10 +458,10 @@ Wire Wire Line
 	2950 1400 2800 1400
 Connection ~ 2800 1400
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5C2D1688
 P 1600 1500
-F 0 "#PWR?" H 1600 1250 50  0001 C CNN
+F 0 "#PWR0101" H 1600 1250 50  0001 C CNN
 F 1 "GND" H 1605 1327 50  0000 C CNN
 F 2 "" H 1600 1500 50  0001 C CNN
 F 3 "" H 1600 1500 50  0001 C CNN
@@ -703,4 +470,249 @@ F 3 "" H 1600 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1600 1500 1600 1400
+$Comp
+L dk_Slide-Switches:JS202011SCQN S?
+U 1 1 5C47B817
+P 5550 3700
+F 0 "S?" H 5550 4183 50  0000 C CNN
+F 1 "JS202011SCQN" H 5550 4092 50  0000 C CNN
+F 2 "digikey-footprints:Switch_Slide_JS202011SCQN" H 5750 3900 50  0001 L CNN
+F 3 "https://www.ckswitches.com/media/1422/js.pdf" H 5750 4000 60  0001 L CNN
+F 4 "401-2002-1-ND" H 5750 4100 60  0001 L CNN "Digi-Key_PN"
+F 5 "JS202011SCQN" H 5750 4200 60  0001 L CNN "MPN"
+F 6 "Switches" H 5750 4300 60  0001 L CNN "Category"
+F 7 "Slide Switches" H 5750 4400 60  0001 L CNN "Family"
+F 8 "https://www.ckswitches.com/media/1422/js.pdf" H 5750 4500 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/c-k/JS202011SCQN/401-2002-1-ND/1640098" H 5750 4600 60  0001 L CNN "DK_Detail_Page"
+F 10 "SWITCH SLIDE DPDT 300MA 6V" H 5750 4700 60  0001 L CNN "Description"
+F 11 "C&K" H 5750 4800 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5750 4900 60  0001 L CNN "Status"
+	1    5550 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7000 Q?
+U 1 1 5C47BC90
+P 3850 6900
+F 0 "Q?" H 3958 6953 60  0000 L CNN
+F 1 "2N7000" H 3958 6847 60  0000 L CNN
+F 2 "digikey-footprints:TO-92-3" H 4050 7100 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4050 7200 60  0001 L CNN
+F 4 "2N7000FS-ND" H 4050 7300 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7000" H 4050 7400 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 4050 7500 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 4050 7600 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4050 7700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7000/2N7000FS-ND/244278" H 4050 7800 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 200MA TO-92" H 4050 7900 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 4050 8000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4050 8100 60  0001 L CNN "Status"
+	1    3850 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6300 3850 6350
+Wire Wire Line
+	3850 6650 3850 6700
+Wire Wire Line
+	3850 7100 3850 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5C48113D
+P 2800 7150
+F 0 "#PWR?" H 2800 6900 50  0001 C CNN
+F 1 "GND" H 2805 6977 50  0000 C CNN
+F 2 "" H 2800 7150 50  0001 C CNN
+F 3 "" H 2800 7150 50  0001 C CNN
+	1    2800 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5C481143
+P 2800 6300
+F 0 "#PWR?" H 2800 6150 50  0001 C CNN
+F 1 "VCC" H 2817 6473 50  0000 C CNN
+F 2 "" H 2800 6300 50  0001 C CNN
+F 3 "" H 2800 6300 50  0001 C CNN
+	1    2800 6300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C481149
+P 2800 6500
+F 0 "D?" V 2838 6383 50  0000 R CNN
+F 1 "Red" V 2747 6383 50  0000 R CNN
+F 2 "switchboard:E10 Edison Socket Print Pins" H 2800 6500 50  0001 C CNN
+F 3 "~" H 2800 6500 50  0001 C CNN
+	1    2800 6500
+	0    1    -1   0   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7000 Q?
+U 1 1 5C481158
+P 2800 6900
+F 0 "Q?" H 2908 6953 60  0000 L CNN
+F 1 "2N7000" H 2908 6847 60  0000 L CNN
+F 2 "digikey-footprints:TO-92-3" H 3000 7100 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3000 7200 60  0001 L CNN
+F 4 "2N7000FS-ND" H 3000 7300 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7000" H 3000 7400 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 3000 7500 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 3000 7600 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 3000 7700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7000/2N7000FS-ND/244278" H 3000 7800 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 200MA TO-92" H 3000 7900 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 3000 8000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3000 8100 60  0001 L CNN "Status"
+	1    2800 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 6300 2800 6350
+Wire Wire Line
+	2800 6650 2800 6700
+Wire Wire Line
+	2800 7100 2800 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5C482C0A
+P 5850 7150
+F 0 "#PWR?" H 5850 6900 50  0001 C CNN
+F 1 "GND" H 5855 6977 50  0000 C CNN
+F 2 "" H 5850 7150 50  0001 C CNN
+F 3 "" H 5850 7150 50  0001 C CNN
+	1    5850 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5C482C10
+P 5850 6300
+F 0 "#PWR?" H 5850 6150 50  0001 C CNN
+F 1 "VCC" H 5867 6473 50  0000 C CNN
+F 2 "" H 5850 6300 50  0001 C CNN
+F 3 "" H 5850 6300 50  0001 C CNN
+	1    5850 6300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C482C16
+P 5850 6500
+F 0 "D?" V 5888 6383 50  0000 R CNN
+F 1 "Red" V 5797 6383 50  0000 R CNN
+F 2 "switchboard:E10 Edison Socket Print Pins" H 5850 6500 50  0001 C CNN
+F 3 "~" H 5850 6500 50  0001 C CNN
+	1    5850 6500
+	0    1    -1   0   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7000 Q?
+U 1 1 5C482C25
+P 5850 6900
+F 0 "Q?" H 5958 6953 60  0000 L CNN
+F 1 "2N7000" H 5958 6847 60  0000 L CNN
+F 2 "digikey-footprints:TO-92-3" H 6050 7100 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6050 7200 60  0001 L CNN
+F 4 "2N7000FS-ND" H 6050 7300 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7000" H 6050 7400 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 6050 7500 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 6050 7600 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6050 7700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7000/2N7000FS-ND/244278" H 6050 7800 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 200MA TO-92" H 6050 7900 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 6050 8000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6050 8100 60  0001 L CNN "Status"
+	1    5850 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6300 5850 6350
+Wire Wire Line
+	5850 6650 5850 6700
+Wire Wire Line
+	5850 7100 5850 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5C482C2E
+P 4800 7150
+F 0 "#PWR?" H 4800 6900 50  0001 C CNN
+F 1 "GND" H 4805 6977 50  0000 C CNN
+F 2 "" H 4800 7150 50  0001 C CNN
+F 3 "" H 4800 7150 50  0001 C CNN
+	1    4800 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5C482C34
+P 4800 6300
+F 0 "#PWR?" H 4800 6150 50  0001 C CNN
+F 1 "VCC" H 4817 6473 50  0000 C CNN
+F 2 "" H 4800 6300 50  0001 C CNN
+F 3 "" H 4800 6300 50  0001 C CNN
+	1    4800 6300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5C482C3A
+P 4800 6500
+F 0 "D?" V 4838 6383 50  0000 R CNN
+F 1 "Red" V 4747 6383 50  0000 R CNN
+F 2 "switchboard:E10 Edison Socket Print Pins" H 4800 6500 50  0001 C CNN
+F 3 "~" H 4800 6500 50  0001 C CNN
+	1    4800 6500
+	0    1    -1   0   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7000 Q?
+U 1 1 5C482C49
+P 4800 6900
+F 0 "Q?" H 4908 6953 60  0000 L CNN
+F 1 "2N7000" H 4908 6847 60  0000 L CNN
+F 2 "digikey-footprints:TO-92-3" H 5000 7100 60  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 5000 7200 60  0001 L CNN
+F 4 "2N7000FS-ND" H 5000 7300 60  0001 L CNN "Digi-Key_PN"
+F 5 "2N7000" H 5000 7400 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 5000 7500 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 5000 7600 60  0001 L CNN "Family"
+F 8 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 5000 7700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/on-semiconductor/2N7000/2N7000FS-ND/244278" H 5000 7800 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET N-CH 60V 200MA TO-92" H 5000 7900 60  0001 L CNN "Description"
+F 11 "ON Semiconductor" H 5000 8000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5000 8100 60  0001 L CNN "Status"
+	1    4800 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 6300 4800 6350
+Wire Wire Line
+	4800 6650 4800 6700
+Wire Wire Line
+	4800 7100 4800 7150
+Wire Wire Line
+	2400 7000 2500 7000
+Wire Wire Line
+	2400 3200 2400 7000
+Wire Wire Line
+	3450 5250 3450 7000
+Wire Wire Line
+	3450 7000 3550 7000
+Wire Wire Line
+	2500 5250 3450 5250
+Wire Wire Line
+	4400 5150 4400 7000
+Wire Wire Line
+	4400 7000 4500 7000
+Wire Wire Line
+	2600 5150 4400 5150
+Wire Wire Line
+	5450 5050 5450 7000
+Wire Wire Line
+	5450 7000 5550 7000
+Wire Wire Line
+	2700 5050 5450 5050
 $EndSCHEMATC

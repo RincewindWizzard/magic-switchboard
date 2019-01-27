@@ -1,3 +1,27 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP ATtiny2313-20PU
+D 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-20
+K AVR 8bit Microcontroller tinyAVR
+F http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+$ENDCMP
+#
+$CMP ATtiny2313A-PU
+D 20MHz, 2kB Flash, 128B SRAM, 128B EEPROM, DIP-20
+K AVR 8bit Microcontroller tinyAVR
+F http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+$ENDCMP
+#
+$CMP ATtiny2313V-10PU
+D 10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, DIP-20
+K AVR 8bit Microcontroller tinyAVR
+F http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf
+$ENDCMP
+#
+$CMP ATtiny4313-PU
+D 20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, DIP-20
+K AVR 8bit Microcontroller tinyAVR
+F http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf
+$ENDCMP
+#
 #End Doc Library

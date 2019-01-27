@@ -29,7 +29,7 @@ $Comp
 L switchboard:XY-016 U1
 U 1 1 5C2A4AF6
 P 3400 2400
-F 0 "U1" H 3400 2815 50  0000 C CNN
+F 0 "U1" H 3400 2400 50  0000 C CNN
 F 1 "XY-016" H 3400 2724 50  0000 C CNN
 F 2 "switchboard:XY-016" H 3400 2500 50  0001 C CNN
 F 3 "" H 3400 2500 50  0001 C CNN
@@ -76,7 +76,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 2550 2700 2550
 Wire Wire Line
-	2700 2250 3000 2250
+	2700 2250 2950 2250
 $Comp
 L power:GND #PWR023
 U 1 1 5C2A7170
@@ -809,4 +809,38 @@ Wire Wire Line
 	6050 3250 6950 3250
 Wire Wire Line
 	6050 4350 7050 4350
+$Comp
+L switchboard:BoostConverter U2
+U 1 1 5C4DCF30
+P 3400 1400
+F 0 "U2" H 3400 1665 50  0000 C CNN
+F 1 "alternative Boost Converter" H 3400 1574 50  0000 C CNN
+F 2 "switchboard:BoostConverter3Pin" H 3400 1400 50  0001 C CNN
+F 3 "" H 3400 1400 50  0001 C CNN
+	1    3400 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2950 2250
+Wire Wire Line
+	2950 2250 3000 2250
+Connection ~ 4050 2250
+$Comp
+L power:GND #PWR028
+U 1 1 5C4E17B4
+P 3400 1750
+F 0 "#PWR028" H 3400 1500 50  0001 C CNN
+F 1 "GND" H 3405 1577 50  0000 C CNN
+F 2 "" H 3400 1750 50  0001 C CNN
+F 3 "" H 3400 1750 50  0001 C CNN
+	1    3400 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1400 2950 1400
+Wire Wire Line
+	2950 1400 2950 2250
+Wire Wire Line
+	3700 1400 4050 1400
+Wire Wire Line
+	4050 1400 4050 2250
 $EndSCHEMATC

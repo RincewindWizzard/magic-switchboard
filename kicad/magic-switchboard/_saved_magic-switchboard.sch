@@ -814,7 +814,7 @@ L switchboard:BoostConverter U2
 U 1 1 5C4DCF30
 P 3400 1400
 F 0 "U2" H 3400 1665 50  0000 C CNN
-F 1 "alternative Boost Converter" H 3400 1574 50  0000 C CNN
+F 1 "5V Boost Converter" H 3400 1574 50  0000 C CNN
 F 2 "switchboard:BoostConverter3Pin" H 3400 1400 50  0001 C CNN
 F 3 "" H 3400 1400 50  0001 C CNN
 	1    3400 1400
@@ -840,7 +840,7 @@ Wire Wire Line
 Wire Wire Line
 	2950 1400 2950 2250
 Wire Wire Line
-	3700 1400 4050 1400
-Wire Wire Line
 	4050 1400 4050 2250
+Wire Wire Line
+	3700 1400 4050 1400
 $EndSCHEMATC

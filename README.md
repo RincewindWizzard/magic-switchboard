@@ -40,3 +40,8 @@ In order to connect the correct colors from levers to lamps, you need to remembe
 - Arduino Nano (or a cheap chinese clone)
 - Battery Clip for CR2477: https://www.digikey.de/product-detail/de/keystone-electronics/3039/36-3039-ND/3884009
 - On/Off Switch: https://www.digikey.de/product-detail/de/cw-industries/GF-123-3011/CWI334-ND/4089772
+
+# Fehler
+## Version v4
+- Obere Kontaktfläche für Knopfzelle nicht mit GND verbunden
+- bei einem boost converter von 5V zieht die Schaltung 80 mA, was deutlich über der Spezifikation für CR2477 Knopfzellen liegt (15mA)

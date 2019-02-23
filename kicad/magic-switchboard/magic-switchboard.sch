@@ -7,9 +7,9 @@ encoding utf-8
 Sheet 1 1
 Title "Magic Switchboard"
 Date "2018-12-31"
-Rev "r2"
+Rev "r4"
 Comp "magierdinge.de"
-Comment1 ""
+Comment1 "attiny2313 version"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -17,23 +17,23 @@ $EndDescr
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 5C2A4986
-P 750 1350
-F 0 "BT1" H 868 1446 50  0000 L CNN
-F 1 "3V" H 868 1355 50  0000 L CNN
-F 2 "switchboard:BatteryHolder_Keystone_3009_1x2450" V 750 1410 50  0001 C CNN
-F 3 "~" V 750 1410 50  0001 C CNN
-	1    750  1350
+P 2100 1800
+F 0 "BT1" H 2218 1896 50  0000 L CNN
+F 1 "3V" H 2218 1805 50  0000 L CNN
+F 2 "switchboard:BatteryHolder_Keystone_3009_1x2450" V 2100 1860 50  0001 C CNN
+F 3 "~" V 2100 1860 50  0001 C CNN
+	1    2100 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR04
 U 1 1 5C2A6172
-P 1150 1100
-F 0 "#PWR04" H 1150 950 50  0001 C CNN
-F 1 "VCC" H 1167 1273 50  0000 C CNN
-F 2 "" H 1150 1100 50  0001 C CNN
-F 3 "" H 1150 1100 50  0001 C CNN
-	1    1150 1100
+P 2500 1550
+F 0 "#PWR04" H 2500 1400 50  0001 C CNN
+F 1 "VCC" H 2517 1723 50  0000 C CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "" H 2500 1550 50  0001 C CNN
+	1    2500 1550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -72,23 +72,23 @@ $EndComp
 $Comp
 L Device:CP C1
 U 1 1 5C2CDA79
-P 1150 1300
-F 0 "C1" H 1268 1346 50  0000 L CNN
-F 1 "100uF" H 1268 1255 50  0000 L CNN
-F 2 "switchboard:CP_Radial_D6.3mm_P2.50mm" H 1188 1150 50  0001 C CNN
-F 3 "~" H 1150 1300 50  0001 C CNN
-	1    1150 1300
+P 2500 1750
+F 0 "C1" H 2618 1796 50  0000 L CNN
+F 1 "100uF" H 2618 1705 50  0000 L CNN
+F 2 "switchboard:CP_Radial_D6.3mm_P2.50mm" H 2538 1600 50  0001 C CNN
+F 3 "~" H 2500 1750 50  0001 C CNN
+	1    2500 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C2
 U 1 1 5C2D5FC7
-P 2150 1300
-F 0 "C2" H 2268 1346 50  0000 L CNN
-F 1 "100uF" H 2268 1255 50  0000 L CNN
-F 2 "switchboard:CP_Radial_D6.3mm_P2.50mm" H 2188 1150 50  0001 C CNN
-F 3 "~" H 2150 1300 50  0001 C CNN
-	1    2150 1300
+P 3500 1750
+F 0 "C2" H 3618 1796 50  0000 L CNN
+F 1 "100uF" H 3618 1705 50  0000 L CNN
+F 2 "switchboard:CP_Radial_D6.3mm_P2.50mm" H 3538 1600 50  0001 C CNN
+F 3 "~" H 3500 1750 50  0001 C CNN
+	1    3500 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -196,23 +196,23 @@ $EndComp
 $Comp
 L switchboard:BoostConverter U2
 U 1 1 5C4DCF30
-P 1750 1100
-F 0 "U2" H 1750 1365 50  0000 C CNN
-F 1 "5V Boost" H 1750 1274 50  0000 C CNN
-F 2 "switchboard:BoostConverter3Pin" H 1750 1100 50  0001 C CNN
-F 3 "" H 1750 1100 50  0001 C CNN
-	1    1750 1100
+P 3100 1550
+F 0 "U2" H 3100 1815 50  0000 C CNN
+F 1 "5V Boost" H 3100 1724 50  0000 C CNN
+F 2 "switchboard:BoostConverter3Pin" H 3100 1550 50  0001 C CNN
+F 3 "" H 3100 1550 50  0001 C CNN
+	1    3100 1550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR028
 U 1 1 5C4E17B4
-P 1750 1580
-F 0 "#PWR028" H 1750 1330 50  0001 C CNN
-F 1 "GND" H 1755 1407 50  0000 C CNN
-F 2 "" H 1750 1580 50  0001 C CNN
-F 3 "" H 1750 1580 50  0001 C CNN
-	1    1750 1580
+P 2500 2020
+F 0 "#PWR028" H 2500 1770 50  0001 C CNN
+F 1 "GND" H 2505 1847 50  0000 C CNN
+F 2 "" H 2500 2020 50  0001 C CNN
+F 3 "" H 2500 2020 50  0001 C CNN
+	1    2500 2020
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -429,44 +429,36 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR01
 U 1 1 5C504B49
-P 2150 1100
-F 0 "#PWR01" H 2150 950 50  0001 C CNN
-F 1 "+5V" H 2165 1273 50  0000 C CNN
-F 2 "" H 2150 1100 50  0001 C CNN
-F 3 "" H 2150 1100 50  0001 C CNN
-	1    2150 1100
+P 3500 1550
+F 0 "#PWR01" H 3500 1400 50  0001 C CNN
+F 1 "+5V" H 3515 1723 50  0000 C CNN
+F 2 "" H 3500 1550 50  0001 C CNN
+F 3 "" H 3500 1550 50  0001 C CNN
+	1    3500 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 1500 1750 1450
+	2800 1550 2500 1550
 Wire Wire Line
-	1450 1100 1150 1100
+	2500 1550 2500 1600
 Wire Wire Line
-	1150 1100 1150 1150
+	2500 1550 2100 1550
 Wire Wire Line
-	1150 1100 750  1100
+	2100 1550 2100 1600
+Connection ~ 2500 1550
 Wire Wire Line
-	750  1100 750  1150
-Connection ~ 1150 1100
+	2100 1900 2100 1950
 Wire Wire Line
-	750  1450 750  1500
+	2100 1950 2500 1950
 Wire Wire Line
-	750  1500 1150 1500
+	2500 1950 2500 1900
 Wire Wire Line
-	1150 1500 1150 1450
+	3500 1950 3500 1900
 Wire Wire Line
-	1150 1500 1750 1500
-Connection ~ 1150 1500
-Connection ~ 1750 1500
+	3500 1600 3500 1550
 Wire Wire Line
-	1750 1500 2150 1500
-Wire Wire Line
-	2150 1500 2150 1450
-Wire Wire Line
-	2150 1150 2150 1100
-Wire Wire Line
-	2150 1100 2050 1100
-Connection ~ 2150 1100
+	3500 1550 3400 1550
+Connection ~ 3500 1550
 $Comp
 L power:GND #PWR03
 U 1 1 5C52173D
@@ -679,5 +671,83 @@ Wire Wire Line
 Wire Wire Line
 	10600 3700 10600 3650
 Wire Wire Line
-	1750 1500 1750 1580
+	2500 2020 2500 1950
+Connection ~ 2500 1950
+Wire Wire Line
+	3500 1950 3100 1950
+Wire Wire Line
+	3100 1950 3100 1900
+$Comp
+L Transistor_BJT:BC547 Q5
+U 1 1 5C4E6680
+P 3400 2275
+F 0 "Q5" H 3591 2321 50  0000 L CNN
+F 1 "BC547" H 3591 2230 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 3600 2200 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 3400 2275 50  0001 L CNN
+	1    3400 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2075 3500 1950
+Connection ~ 3500 1950
+$Comp
+L power:GND #PWR018
+U 1 1 5C4E864A
+P 3500 2550
+F 0 "#PWR018" H 3500 2300 50  0001 C CNN
+F 1 "GND" H 3505 2377 50  0000 C CNN
+F 2 "" H 3500 2550 50  0001 C CNN
+F 3 "" H 3500 2550 50  0001 C CNN
+	1    3500 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2550 3500 2475
+Text GLabel 8750 3800 2    50   Input ~ 0
+lightpower
+Wire Wire Line
+	8750 3800 8700 3800
+Text GLabel 2775 2275 0    50   Input ~ 0
+lightpower
+Wire Wire Line
+	3150 2275 3200 2275
+$Comp
+L Device:R R5
+U 1 1 5C4EFD8C
+P 3000 2275
+F 0 "R5" V 2925 2275 50  0000 C CNN
+F 1 "10k" V 3000 2275 50  0000 C CNN
+F 2 "switchboard:Resistor" V 2930 2275 50  0001 C CNN
+F 3 "~" H 3000 2275 50  0001 C CNN
+	1    3000 2275
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2775 2275 2850 2275
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5C4F2DCC
+P 1325 1775
+F 0 "J2" H 1245 1450 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 1245 1541 50  0000 C CNN
+F 2 "switchboard:ScrewTerminal1x2" H 1325 1775 50  0001 C CNN
+F 3 "~" H 1325 1775 50  0001 C CNN
+	1    1325 1775
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1525 1675 1875 1675
+Wire Wire Line
+	1875 1675 1875 1550
+Wire Wire Line
+	1875 1550 2100 1550
+Connection ~ 2100 1550
+Wire Wire Line
+	2100 1950 1875 1950
+Wire Wire Line
+	1875 1950 1875 1775
+Wire Wire Line
+	1875 1775 1525 1775
+Connection ~ 2100 1950
 $EndSCHEMATC

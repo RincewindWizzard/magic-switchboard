@@ -158,21 +158,6 @@ X E 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# power_+5V
-#
-DEF power_+5V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+5V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
@@ -233,21 +218,6 @@ X PD2 6 600 -300 100 L 50 50 1 1 T
 X PD3 7 600 -400 100 L 50 50 1 1 T
 X PD4 8 600 -500 100 L 50 50 1 1 T
 X PD5 9 600 -600 100 L 50 50 1 1 T
-ENDDRAW
-ENDDEF
-#
-# switchboard_BoostConverter
-#
-DEF switchboard_BoostConverter U 0 40 Y Y 1 F N
-F0 "U" -150 -200 50 H V C CNN
-F1 "switchboard_BoostConverter" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -200 100 200 -250 0 1 0 N
-X Vin 1 -300 0 100 R 50 50 1 1 I
-X GND 2 0 -350 100 U 50 50 1 1 I
-X Vout 3 300 0 100 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

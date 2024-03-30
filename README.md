@@ -9,7 +9,7 @@ When the audience returns his box he remembers the sequence in which the lights 
 For the audience it seems like the colors are connected somehow.
 
 # Wiring
-You can find wiring instructions in the [Schematics](Schematic_Magic-Switchboard.png).
+You can find wiring instructions in the [Schematics](magic-switchboard.svg).
 The [Attiny4313A](http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf) can be powered with up to 5V.
 
 With the [BC547](https://www.sparkfun.com/datasheets/Components/BC546.pdf) transistor you can safely drive a current up to 100 mA and voltage of 50V for your light bulbs. For bigger loads consider using [TIP100](https://www.onsemi.com/pub/Collateral/TIP100-D.PDF).

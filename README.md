@@ -8,6 +8,8 @@ He then hands off the box to the audience and asks them to rearrange the colors.
 When the audience returns his box he remembers the sequence in which the lights turn on and turns the switches with matching color.
 For the audience it seems like the colors are connected somehow.
 
+[Youtube Video](https://youtu.be/IKBSlG797YQ)
+
 # Wiring
 You can find wiring instructions in the [Schematics](magic-switchboard.svg).
 The [Attiny4313A](http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf) can be powered with up to 5V.

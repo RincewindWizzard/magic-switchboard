@@ -1,4 +1,7 @@
 # Magic Switchboard
+
+![Magic Switchboard geöffnet](images/magic-switchboard.jpg) 
+
 A magic schwitchboard is a little box with four switches and four lamps colored in red, green, blue and yellow.
 The switches have got hats in the same colors. You can change the position of the lamps and the hats in any way you want.
 But the red switch always lights the red lamp, the blue the blue, the yellow the yellow and the green the green one.
@@ -11,6 +14,11 @@ For the audience it seems like the colors are connected somehow.
 [Youtube Video](https://youtu.be/IKBSlG797YQ)
 
 # Wiring
+
+![Platine leer](images/platine_leer.jpg)
+![Platine bestückt](images/platine.jpg)
+
+
 You can find wiring instructions in the [Schematics](magic-switchboard.svg).
 The [Attiny4313A](http://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf) can be powered with up to 5V.
 
@@ -33,6 +41,8 @@ After a longer sleep time (ca. 2.5sec) it resets to default = 0 lever.
 | 3                     | 3, 2, 1, 0       |
 
 In order to connect the correct colors from levers to lamps, you need to remember which lamp turns on next and flip the lever with the corresponding color.
+
+You find the code [here](arduino/switchboard.ino).
 
 # Parts List
 - ON/OFF switch (MTS-102)
